@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accès sécurisé</title>
+</head>
+<body>
+
+<h2>Connexion</h2>
+
+<input type="text" id="user" placeholder="Identifiant"><br>
+<input type="password" id="pass" placeholder="Mot de passe"><br>
+<button onclick="login()">Valider</button>
+
+<p id="result"></p>
+
+<script>
+const data = {
+  "alexis": "clef123",
+  "maverick": "labo42",
+  "john": "delta9"
+};
+
+function login() {
+  let user = document.getElementById("user").value.toLowerCase();
+  let pass = document.getElementById("pass").value;
+
+  if (data[user] && data[user] === pass) {
+    document.getElementById("result").innerHTML =
+      "Accès autorisé. Ton indice : " + user.charAt(0).toUpperCase();
+  } else {
+    document.getElementById("result").innerHTML = "Accès refusé.";
+  }
+}
+</script>
+
+</body>
+</html>
