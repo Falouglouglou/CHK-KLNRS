@@ -16,8 +16,8 @@
 
 <script>
 const data = {
-  "alice": "secret1",
-  "bob": "secret2",
+  "cassy": "gojo",
+  "bob": "cacaboudin",
   "charlie": "secret3"
 };
 
