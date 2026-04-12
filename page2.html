@@ -32,6 +32,7 @@ input {
 
 button {
   padding: 10px;
+  margin-top: 10px;
   border: none;
   border-radius: 5px;
   background-color: #00ffcc;
@@ -49,6 +50,9 @@ button {
 
   <button onclick="checkCode()">Valider</button><br><br>
 
+  <!-- 🔒 Bouton caché au début -->
+  <button id="nextBtn" onclick="goNext()" style="display:none;">Page suivante</button><br><br>
+
   <button onclick="goBack()">Retour</button>
 
   <p id="result"></p>
@@ -61,9 +65,17 @@ function checkCode() {
 
   if (code === "CACAPROUT") {
     document.getElementById("result").innerHTML = "Accès autorisé...";
+
+    // 🔓 Affiche le bouton seulement si code correct
+    document.getElementById("nextBtn").style.display = "inline-block";
+
   } else {
     document.getElementById("result").innerHTML = "Code incorrect.";
   }
+}
+
+function goNext() {
+  window.location.href = "page3.html";
 }
 
 function goBack() {
