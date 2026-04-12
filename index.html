@@ -67,7 +67,7 @@ button:hover {
 
 <script>
 
-// 🔐 IDENTIFIANTS + MOTS DE PASSE
+// IDENTIFIANTS + MOTS DE PASSE
 const data = {
   "naneey_": "mdp1",
   "kolibri8680": "mdp2",
@@ -80,20 +80,20 @@ const data = {
   "kussenspookje": "mdp9"
 };
 
-// 🧩 INDICES PERSONNALISÉS
+// INDICES PERSONNALISÉS
 const indices = {
-  "naneey_": "Indice : C",
-  "kolibri8680": "Indice : H",
-  "herstal": "Indice : K",
-  "k.g.f": "Indice : L",
-  "kayu.mp4": "Indice : N",
-  "lysias_31130": "Indice : R",
-  "h.e.s.t.i.a": "Indice : S",
-  "starkeeeey": "Indice : ?",
-  "kussenspookje": "Indice : 🔍"
+  "naneey_": "Félicitation ! Ton indice est ",
+  "kolibri8680": "Félicitation ! Ton indice est ",
+  "herstal": "Félicitation ! Ton indice est ",
+  "k.g.f": "Félicitation ! Ton indice est ",
+  "kayu.mp4": "Félicitation ! Ton indice est ",
+  "lysias_31130": "Félicitation ! Ton indice est ",
+  "h.e.s.t.i.a": "Félicitation ! Ton indice est ",
+  "starkeeeey": "Félicitation ! Ton indice est ",
+  "kussenspookje": "Félicitation ! Ton indice est "
 };
 
-// 👁️ AFFICHER / MASQUER MOT DE PASSE
+// AFFICHER / MASQUER MOT DE PASSE
 function togglePassword() {
   let passField = document.getElementById("pass");
   if (passField.type === "password") {
@@ -103,7 +103,7 @@ function togglePassword() {
   }
 }
 
-// 🔓 LOGIN
+// LOGIN
 function login() {
   let user = document.getElementById("user").value;
   let pass = document.getElementById("pass").value;
