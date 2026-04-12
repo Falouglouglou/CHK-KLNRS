@@ -62,6 +62,9 @@ button:hover {
 
   <button onclick="login()">Valider</button>
 
+  <!-- 🔒 Bouton caché au début -->
+  <button id="nextBtn" onclick="goNext()" style="display:none;">Page suivante</button>
+
   <p id="result"></p>
 </div>
 
@@ -110,9 +113,18 @@ function login() {
 
   if (data[user] && data[user] === pass) {
     document.getElementById("result").innerHTML = indices[user];
+
+    // 🔓 Affiche le bouton uniquement si c'est bon
+    document.getElementById("nextBtn").style.display = "inline-block";
+
   } else {
     document.getElementById("result").innerHTML = "Accès refusé.";
   }
+}
+
+// CHANGEMENT DE PAGE
+function goNext() {
+  window.location.href = "page2.html";
 }
 
 </script>
