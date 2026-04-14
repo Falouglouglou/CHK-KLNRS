@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dernier accès</title>
 
+<style>
+body {
+  background-color: #0d0d0d;
+  color: #00ffcc;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffcc;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<p>
+Heyyyy... alors déjà, bravo. Bravo d'être arrivé jusqu'ici.<br><br>
+
+En fait, à l'heure où j'écris ça, je sais même pas si le projet verra le jour, et encore moins si vous réussirez à lire dans ma tête pour venir à bout de l'ARG.<br><br>
+
+J'avais envie de faire ça depuis longtemps. C'est loin d'être parfait, j'ai fait pleins de recherches, pleins d'essais foireux pour en arriver là. J'espère que quand j'en aurait fini avec ce stupide jeu d'énigme, je serais fier. Et j'espère vous rendre fier également.<br><br>
+
+Voilà plus d'un an qu'Auridia existe, et qu'il est ressuscité de ses cendres.<br><br>
+
+A la base j'voulais faire une longue lettre pour vous dire que j'vous aime, mais j'me suis rendu compte que vous méritiez mieux que ça.<br><br>
+
+Donc voilà, chacun a la sienne, j'vous parle à cœur ouvert et sans détour, parce que la vie est trop courte pour s'emmerder avec ça, prenons les raccourcis.<br><br>
+
+En revanche... Vous ne croyez quand même pas que j'allais vous la donner comme ça ?<br><br>
+
+Parfois, il faut savoir regarder derrière soi pour avancer.
+</p>
+
+<br>
+
+<input type="text" id="code" placeholder="Mot de passe"><br>
+
+<button onclick="checkCode()">Valider</button>
+
+<br><br>
+
+<!-- 🔒 Bouton caché -->
+<button id="docBtn" style="display:none;" onclick="openDoc()">Accéder à ton message</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+// 🔐 MOTS DE PASSE → LIENS (à remplacer plus tard)
+const links = {
+  "MOTDEPASSE1": "https://lien-doc-1",
+  "MOTDEPASSE2": "https://lien-doc-2",
+  "MOTDEPASSE3": "https://lien-doc-3",
+  "MOTDEPASSE4": "https://lien-doc-4",
+  "MOTDEPASSE5": "https://lien-doc-5",
+  "MOTDEPASSE6": "https://lien-doc-6",
+  "MOTDEPASSE7": "https://lien-doc-7",
+  "MOTDEPASSE8": "https://lien-doc-8",
+  "MOTDEPASSE9": "https://lien-doc-9"
+};
+
+let currentLink = "";
+
+// 🔍 Vérification
+function checkCode() {
+  let code = document.getElementById("code").value;
+
+  if (links[code]) {
+    document.getElementById("result").innerHTML = "Accès autorisé...";
+
+    currentLink = links[code];
+
+    // 🔓 afficher bouton
+    document.getElementById("docBtn").style.display = "inline-block";
+
+  } else {
+    document.getElementById("result").innerHTML = "Mot de passe incorrect.";
+  }
+}
+
+// 🔗 Ouvrir le bon doc
+function openDoc() {
+  window.location.href = currentLink;
+}
+
+</script>
+
+</body>
+</html>
