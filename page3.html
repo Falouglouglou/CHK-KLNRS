@@ -49,17 +49,15 @@ button {
 <p>
 Heyyyy... alors déjà, bravo. Bravo d'être arrivé jusqu'ici.<br><br>
 
-En fait, à l'heure où j'écris ça, je sais même pas si le projet verra le jour, et encore moins si vous réussirez à lire dans ma tête pour venir à bout de l'ARG.<br><br>
+En fait, à l'heure où j'écris ça, je sais même pas si le projet verra le jour, et encore moins si vous réussirez à lire dans ma tête pour venir à bout de l'ARG. J'avais envie de faire ça depuis longtemps. C'est loin d'être parfait, j'ai fait pleins de recherches, pleins d'essais foireux pour en arriver là. J'espère que quand j'en aurait fini avec ce stupide jeu d'énigme, je serais fier. Et j'espère vous rendre fier également.<br><br>
 
-J'avais envie de faire ça depuis longtemps. C'est loin d'être parfait, j'ai fait pleins de recherches, pleins d'essais foireux pour en arriver là. J'espère que quand j'en aurait fini avec ce stupide jeu d'énigme, je serais fier. Et j'espère vous rendre fier également.<br><br>
+Un an. Voilà plus d'un an qu'Auridia existe.<br><br>
 
-Voilà plus d'un an qu'Auridia existe, et qu'il est ressuscité de ses cendres.<br><br>
+Ressusciter ce serveur n'a pas été une tâche facile, mais vous étiez là. <br><br>
 
-A la base j'voulais faire une longue lettre pour vous dire que j'vous aime, mais j'me suis rendu compte que vous méritiez mieux que ça.<br><br>
+Et vous l'êtes toujours. Pour ça, je vous remercie. Je m'apprêtais à le faire avec un long message général...<br><br>
 
-Donc voilà, chacun a la sienne, j'vous parle à cœur ouvert et sans détour, parce que la vie est trop courte pour s'emmerder avec ça, prenons les raccourcis.<br><br>
-
-En revanche... Vous ne croyez quand même pas que j'allais vous la donner comme ça ?<br><br>
+Mais j'me suis dit que vous méritiez mieux que ça. Alors je vous ai écrit une lettre à chacun, où je vous parle à cœur ouvert. Mais vous ne pensiez quand même pas que j'allais vous la servir sur un plateau d'argent ?<br><br>
 
 Parfois, il faut savoir regarder derrière soi pour avancer.
 </p>
@@ -81,22 +79,22 @@ Parfois, il faut savoir regarder derrière soi pour avancer.
 
 <script>
 
-// 🔐 MOTS DE PASSE → LIENS (à remplacer plus tard)
+// MOTS DE PASSE → LIENS 
 const links = {
-  "MOTDEPASSE1": "https://docs.google.com/document/d/19uDZkbFHn3ABOeroWS3z1_pCzvJV9zz31WpuUydY1wk/edit?usp=sharing",
-  "MOTDEPASSE2": "https://docs.google.com/document/d/1lfLkV_B72zMFTWJTe-5WlQYwu6n7jxjNfRGCV9qYO-Q/edit?usp=sharing",
-  "MOTDEPASSE3": "https://lien-doc-3",
-  "MOTDEPASSE4": "https://lien-doc-4",
-  "MOTDEPASSE5": "https://lien-doc-5",
-  "MOTDEPASSE6": "https://lien-doc-6",
-  "MOTDEPASSE7": "https://lien-doc-7",
-  "MOTDEPASSE8": "https://lien-doc-8",
-  "MOTDEPASSE9": "https://lien-doc-9"
+  "2155": "https://docs.google.com/document/d/19uDZkbFHn3ABOeroWS3z1_pCzvJV9zz31WpuUydY1wk/edit?usp=sharing",
+  "2207": "https://docs.google.com/document/d/1lfLkV_B72zMFTWJTe-5WlQYwu6n7jxjNfRGCV9qYO-Q/edit?usp=sharing",
+  "0044": "https://docs.google.com/document/d/1dRlnLk5t0lbVUSnnuLUBbqo2jHgYVzeQ-w0KgJDHlSk/edit?usp=sharing",
+  "1458": "https://docs.google.com/document/d/1Aw-dgD21ouo2uZpq7aQFN2Vh0-twIenf4BRSixAWgIM/edit?usp=sharing",
+  "1051": "https://docs.google.com/document/d/1m68bOAlDjtdsjfK5G2rvNsLse-U4HJQ8k9k4PyPR2gU/edit?usp=sharing",
+  "1908": "https://docs.google.com/document/d/1NIPXNdAv38Tj9JXXMjjjiA_4ew_Rb2tShZDduaGSVXE/edit?usp=sharing",
+  "0030": "https://docs.google.com/document/d/1aiTDSLo9A1D6sp0k30VDmGYfMHbOdIhzZIqPQ-zm49s/edit?usp=sharing",
+  "1033": "https://docs.google.com/document/d/1bM-_OqIMw6m-WpxcXqEgAqJSUEWzoGaedAhG-h2XBwg/edit?usp=sharing",
+  "1904": "https://docs.google.com/document/d/1eAKhuSRIATc_Ho6M_634Bq-DX_QFRNIijqEnHRxwpVw/edit?usp=sharing"
 };
 
 let currentLink = "";
 
-// 🔍 Vérification
+// Vérification
 function checkCode() {
   let code = document.getElementById("code").value;
 
@@ -105,7 +103,7 @@ function checkCode() {
 
     currentLink = links[code];
 
-    // 🔓 afficher bouton
+    // afficher bouton
     document.getElementById("docBtn").style.display = "inline-block";
 
   } else {
@@ -113,7 +111,7 @@ function checkCode() {
   }
 }
 
-// 🔗 Ouvrir le bon doc
+// Ouvrir le bon doc
 function openDoc() {
   window.location.href = currentLink;
 }
